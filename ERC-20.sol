@@ -7,8 +7,8 @@ contract StakeholderToken is ERC20 {
     address private _admin;
 
     constructor(uint256 initialSupply) ERC20("StakeholderToken", "STK") {
-        _admin = msg.sender; // Define al creador como administrador
-        _mint(msg.sender, initialSupply); // Minta todos los tokens al administrador
+        _admin = msg.sender; 
+        _mint(msg.sender, initialSupply); 
     }
 
     // Los tokens no pueden ser transferidos
