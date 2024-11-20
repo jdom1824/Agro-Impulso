@@ -17,7 +17,7 @@ contract ProjectStages is ERC721URIStorage {
     mapping(uint256 => Stage) public stages;
 
     constructor() ERC721("ProjectStages", "PSTG") {
-        _admin = msg.sender; // Define al creador como administrador
+        _admin = msg.sender; 
     }
 
     // Crear una nueva etapa del proyecto
@@ -25,9 +25,9 @@ contract ProjectStages is ERC721URIStorage {
         require(msg.sender == _admin, "ProjectStages: Only admin can create stages");
         uint256 newStageId = _tokenIdCounter;
 
-        _safeMint(msg.sender, newStageId); // Minta el token
-        _setTokenURI(newStageId, uri);    // Asigna URI con detalles
-        stages[newStageId] = Stage(name, description, false, block.timestamp); // Registra la etapa
+        _safeMint(msg.sender, newStageId); 
+        _setTokenURI(newStageId, uri);    
+        stages[newStageId] = Stage(name, description, false, block.timestamp); 
 
         _tokenIdCounter += 1;
         return newStageId;
@@ -40,7 +40,7 @@ contract ProjectStages is ERC721URIStorage {
         require(!stages[stageId].completed, "ProjectStages: Stage already completed");
 
         stages[stageId].completed = true;
-        stages[stageId].timestamp = block.timestamp; // Actualiza el timestamp
+        stages[stageId].timestamp = block.timestamp; 
     }
 
     // Función para actualizar el administrador
