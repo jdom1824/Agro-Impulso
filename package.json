@@ -1,0 +1,20 @@
+{
+  "name": "agro-impulso",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene dos contratos inteligentes diseñados para administrar y supervisar proyectos mediante blockchain. Los contratos están basados en los estándares ERC-20 y ERC-721 de OpenZeppelin, y cuentan con funcionalidades personalizadas para garantizar la transparencia, trazabilidad y no transferibilidad de los tokens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "ethers": "^6.13.4",
+    "hardhat": "^2.22.17"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0"
+  }
+}
